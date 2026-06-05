@@ -1,0 +1,43 @@
+{
+  "name": "MediClock — Recordatorio de Medicamentos",
+  "short_name": "MediClock",
+  "description": "Recordatorio inteligente de medicamentos con historial de dosis",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f0f4f8",
+  "theme_color": "#2d7dd2",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver dosis de hoy",
+      "short_name": "Hoy",
+      "description": "Ver las dosis programadas para hoy",
+      "url": "/index.html#today",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Agregar medicamento",
+      "short_name": "Agregar",
+      "description": "Registrar un nuevo medicamento",
+      "url": "/index.html#add",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"]
+}
