@@ -28,59 +28,27 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-
-  /* LOGIN */
-  .login-screen {
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, #1a365d 0%, #2d7dd2 100%); padding: 20px;
-  }
-  .login-card {
-    background: white; border-radius: 24px; padding: 48px 40px; text-align: center;
-    max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,.3);
-  }
-  .login-logo {
-    width: 72px; height: 72px; border-radius: 20px; background: var(--accent);
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
-  }
+  .login-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a365d 0%, #2d7dd2 100%); padding: 20px; }
+  .login-card { background: white; border-radius: 24px; padding: 48px 40px; text-align: center; max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .login-logo { width: 72px; height: 72px; border-radius: 20px; background: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
   .login-title { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
   .login-title span { color: var(--accent); }
   .login-sub { font-size: 15px; color: var(--text2); margin-bottom: 36px; line-height: 1.5; }
-  .btn-google {
-    width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid var(--border);
-    background: white; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
-    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px;
-    transition: all .2s; color: var(--text);
-  }
+  .btn-google { width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid var(--border); background: white; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; transition: all .2s; color: var(--text); }
   .btn-google:hover { background: var(--surface2); border-color: var(--accent); box-shadow: var(--shadow); }
   .btn-google svg { flex-shrink: 0; }
   .login-footer { margin-top: 24px; font-size: 12px; color: var(--text3); }
-
-  /* HEADER */
-  .header {
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 0 20px; display: flex; align-items: center; justify-content: space-between;
-    height: 64px; position: sticky; top: 0; z-index: 100;
-  }
+  .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; }
   .logo { display: flex; align-items: center; gap: 10px; }
   .logo-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--accent); display: flex; align-items: center; justify-content: center; }
   .logo-name { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
   .logo-name span { color: var(--accent); }
   .header-right { display: flex; align-items: center; gap: 12px; }
   .clock-display { font-family: 'DM Mono', monospace; font-size: 18px; font-weight: 500; }
-  .user-btn {
-    display: flex; align-items: center; gap: 8px; padding: 6px 10px;
-    border-radius: 10px; border: 1px solid var(--border); background: none; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text2); transition: all .2s;
-  }
+  .user-btn { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--border); background: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text2); transition: all .2s; }
   .user-btn:hover { background: var(--surface2); }
-  .user-avatar {
-    width: 28px; height: 28px; border-radius: 50%; background: var(--accent-light);
-    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--accent);
-    overflow: hidden;
-  }
+  .user-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--accent); overflow: hidden; }
   .user-avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-  /* MAIN */
   .main { max-width: 900px; margin: 0 auto; padding: 28px 20px; }
   .tabs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px; width: fit-content; margin-bottom: 28px; }
   .tab { padding: 8px 20px; border-radius: 9px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; background: none; color: var(--text2); transition: all .2s; }
@@ -90,15 +58,10 @@
   .panel.active { display: block; }
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .section-title { font-size: 15px; font-weight: 600; }
-
-  /* BUTTONS */
   .btn-primary { background: var(--accent); color: white; border: none; border-radius: var(--radius-sm); padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all .2s; }
   .btn-primary:hover { background: #1a65bf; }
   .btn-secondary { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all .2s; }
   .btn-secondary:hover { background: var(--border); }
-
-
-  /* MODAL */
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--surface); border-radius: 18px; width: 100%; max-width: 460px; box-shadow: 0 20px 60px rgba(0,0,0,.2); overflow: hidden; animation: modalIn .25s cubic-bezier(.34,1.56,.64,1); }
@@ -119,8 +82,6 @@
   .time-chip button { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 14px; }
   .add-time { display: flex; gap: 8px; margin-top: 8px; }
   .add-time input { flex: 1; }
-
-  /* MED CARDS */
   .meds-grid { display: grid; gap: 12px; }
   .med-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: flex; align-items: center; gap: 16px; box-shadow: var(--shadow); transition: box-shadow .2s; }
   .med-card:hover { box-shadow: var(--shadow-md); }
@@ -134,14 +95,10 @@
   .icon-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border); background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text3); transition: all .2s; }
   .icon-btn:hover { background: var(--surface2); color: var(--text); }
   .icon-btn.danger:hover { background: var(--red-light); color: var(--red); border-color: #feb2b2; }
-
-  /* EMPTY */
   .empty { text-align: center; padding: 60px 20px; }
   .empty-icon { font-size: 48px; margin-bottom: 16px; }
   .empty h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
   .empty p { font-size: 14px; color: var(--text3); }
-
-  /* HISTORY */
   .history-filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
   .filter-chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text2); transition: all .2s; }
   .filter-chip.active { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
@@ -162,24 +119,18 @@
   .btn-take:hover { background: #c6f6d5; }
   .btn-skip { background: var(--red-light); color: var(--red); border: 1px solid #feb2b2; border-radius: 6px; padding: 5px 12px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .2s; }
   .btn-skip:hover { background: #fed7d7; }
-
-  /* STATS */
   .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow); }
   .stat-num { font-size: 32px; font-weight: 600; line-height: 1; margin-bottom: 6px; }
   .stat-label { font-size: 12px; color: var(--text3); font-weight: 500; }
   .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 8px; }
   .progress-fill { height: 100%; border-radius: 3px; transition: width .6s ease; }
-
-  /* ALERT */
   .alert-banner { background: linear-gradient(135deg, #2d7dd2 0%, #1a5fa5 100%); color: white; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
   .alert-banner-icon { font-size: 24px; }
   .alert-banner-info { flex: 1; }
   .alert-banner-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
   .alert-banner-sub { font-size: 13px; opacity: .85; }
   .btn-take-now { background: white; color: var(--accent); border: none; border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-
-  /* TOAST */
   .toast-container { position: fixed; top: 76px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 8px; }
   .toast { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 12px; min-width: 280px; max-width: 360px; animation: toastIn .3s ease; }
   @keyframes toastIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
@@ -190,67 +141,24 @@
   .toast-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
   .toast-msg { font-size: 12px; color: var(--text2); }
   .toast-close { background: none; border: none; color: var(--text3); cursor: pointer; font-size: 16px; }
-
-  /* LOADING */
   .loading-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg); flex-direction: column; gap: 16px; }
   .spinner { width: 40px; height: 40px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
   .c-blue { background: var(--accent-light); color: var(--accent); }
   .c-green { background: var(--green-light); color: var(--green); }
   .c-orange { background: var(--orange-light); color: var(--orange); }
   .c-purple { background: var(--purple-light); color: var(--purple); }
-
-  @media (max-width: 600px) {
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .stats-row .stat-card:last-child { grid-column: 1 / -1; }
-    .form-grid { grid-template-columns: 1fr; }
-    .clock-display { display: none; }
-    .history-action { flex-direction: column; }
-  }
-
-  .feedback-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#2d7dd2;
-    color:#fff;
-    border:none;
-    border-radius:50px;
-    padding:12px 20px;
-    font-size:16px;
-    cursor:pointer;
-    z-index:99999;
-    box-shadow:0 4px 10px rgba(0,0,0,.25);
-}
-
-#feedbackModal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.5);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:100000;
-}
-
-.feedback-content{
-    background:#fff;
-    width:90%;
-    max-width:400px;
-    padding:20px;
-    border-radius:12px;
-}
-
-.feedback-content select,
-.feedback-content textarea{
-    width:100%;
-    margin-top:10px;
-    margin-bottom:10px;
-}
+  @media (max-width: 600px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .stats-row .stat-card:last-child { grid-column: 1 / -1; } .form-grid { grid-template-columns: 1fr; } .clock-display { display: none; } .history-action { flex-direction: column; } }
+  .feedback-btn { position:fixed; bottom:20px; right:20px; background:#2d7dd2; color:#fff; border:none; border-radius:50px; padding:12px 20px; font-size:15px; font-weight:500; cursor:pointer; z-index:99999; box-shadow:0 4px 10px rgba(0,0,0,.25); font-family:'DM Sans',sans-serif; }
+  #feedbackModal { position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; justify-content:center; align-items:center; z-index:100000; }
+  .feedback-content { background:#fff; width:90%; max-width:400px; padding:24px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.2); }
+  .fchip { display:flex; align-items:center; gap:6px; background:#f7fafc; border:1px solid #e2e8f0; border-radius:20px; padding:6px 12px; font-size:13px; cursor:pointer; transition:all .15s; }
+  .fchip:has(input:checked) { background:#ebf4ff; border-color:#2d7dd2; color:#2d7dd2; font-weight:500; }
+  .fchip input { display:none; }
 </style>
 </head>
-<body>
+
+  <body>
 
 <div class="toast-container" id="toastContainer"></div>
 
@@ -361,7 +269,7 @@
   </main>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL MEDICAMENTO -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <div class="modal-header">
@@ -421,14 +329,52 @@
     </div>
   </div>
 </div>
+<!-- BOTÓN OPINIÓN -->
+<button id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
 
-<!-- FIREBASE SDKs -->
+<!-- MODAL OPINIÓN -->
+<div id="feedbackModal" style="display:none;">
+  <div class="feedback-content">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <h3 style="font-size:16px;font-weight:600">¿Cómo va MediClock?</h3>
+      <button onclick="document.getElementById('feedbackModal').style.display='none'"
+        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">×</button>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. ¿Cómo la calificas?</p>
+    <div id="starRow" style="display:flex;gap:8px;margin-bottom:16px">
+      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. ¿Qué funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
+    <div id="goodChips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+      <label class="fchip"><input type="checkbox" value="Recordatorios"> Recordatorios</label>
+      <label class="fchip"><input type="checkbox" value="Historial"> Historial</label>
+      <label class="fchip"><input type="checkbox" value="Diseño"> Diseño</label>
+      <label class="fchip"><input type="checkbox" value="Login"> Login</label>
+      <label class="fchip"><input type="checkbox" value="Agregar medicamentos"> Agregar medicamentos</label>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. ¿Qué le falta o quitarías?</p>
+    <textarea id="mejora" rows="3"
+      style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;resize:none;margin-bottom:16px;outline:none"
+      placeholder="Escribe aquí..."></textarea>
+
+    <button onclick="sendFeedback()"
+      style="width:100%;background:#2d7dd2;color:white;border:none;border-radius:8px;padding:11px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
+      Enviar opinión
+    </button>
+  </div>
+</div>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-import { getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+import { getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, addDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
-// ── FIREBASE CONFIG ────────────────────────────────────────────────────────
 const firebaseConfig = {
   apiKey: "AIzaSyA5_w9ej_JP_yCHAAUvXqQylf5JphySAT8",
   authDomain: "mediclock-4facc.firebaseapp.com",
@@ -443,7 +389,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-// ── STATE ──────────────────────────────────────────────────────────────────
 let currentUser = null;
 let meds = [];
 let logs = [];
@@ -454,13 +399,9 @@ let alerted = new Set();
 let unsubMeds = null;
 let unsubLogs = null;
 
-// ── AUTH ───────────────────────────────────────────────────────────────────
 window.loginGoogle = async () => {
-  try {
-    await signInWithPopup(auth, provider);
-  } catch (e) {
-    showToast('Error al iniciar sesión', e.message, 'error');
-  }
+  try { await signInWithPopup(auth, provider); }
+  catch (e) { showToast('Error al iniciar sesión', e.message, 'error'); }
 };
 
 window.showUserMenu = async () => {
@@ -477,7 +418,6 @@ onAuthStateChanged(auth, user => {
     currentUser = user;
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('appScreen').style.display = 'block';
-    // Avatar
     const av = document.getElementById('userAvatar');
     if (user.photoURL) av.innerHTML = `<img src="${user.photoURL}">`;
     else av.textContent = user.displayName?.[0] || '?';
@@ -491,24 +431,18 @@ onAuthStateChanged(auth, user => {
   }
 });
 
-// ── FIRESTORE LISTENERS ────────────────────────────────────────────────────
 function subscribeData() {
   const uid = currentUser.uid;
-
-  // Medicamentos en tiempo real
   unsubMeds = onSnapshot(collection(db, 'users', uid, 'meds'), snap => {
     meds = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     renderAll();
   });
-
-  // Logs en tiempo real
   unsubLogs = onSnapshot(collection(db, 'users', uid, 'logs'), snap => {
     logs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     renderAll();
   });
 }
 
-// ── SAVE / DELETE ──────────────────────────────────────────────────────────
 async function saveMedDB(data, id) {
   const uid = currentUser.uid;
   const ref = id ? doc(db, 'users', uid, 'meds', id) : doc(collection(db, 'users', uid, 'meds'));
@@ -518,7 +452,6 @@ async function saveMedDB(data, id) {
 
 async function deleteMedDB(id) {
   await deleteDoc(doc(db, 'users', currentUser.uid, 'meds', id));
-  // Eliminar logs del medicamento
   const logsSnap = await getDocs(collection(db, 'users', currentUser.uid, 'logs'));
   for (const d of logsSnap.docs) {
     if (d.data().medId === id) await deleteDoc(d.ref);
@@ -533,7 +466,6 @@ async function saveLogDB(logData, logId) {
   await setDoc(ref, logData);
 }
 
-// ── HELPERS ────────────────────────────────────────────────────────────────
 function dateStr(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 function today() { return dateStr(new Date()); }
 function formatDate(str) {
@@ -549,7 +481,6 @@ function formatDate(str) {
 }
 function colorClass(c) { return `c-${c}`; }
 
-// ── CLOCK ──────────────────────────────────────────────────────────────────
 function updateClock() {
   const now = new Date();
   const h = String(now.getHours()).padStart(2,'0');
@@ -584,8 +515,151 @@ function checkAlerts(now) {
 }
 
 if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission();
+  <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+import { getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, addDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
-// ── TODAY ──────────────────────────────────────────────────────────────────
+const firebaseConfig = {
+  apiKey: "AIzaSyA5_w9ej_JP_yCHAAUvXqQylf5JphySAT8",
+  authDomain: "mediclock-4facc.firebaseapp.com",
+  projectId: "mediclock-4facc",
+  storageBucket: "mediclock-4facc.firebasestorage.app",
+  messagingSenderId: "1001583730678",
+  appId: "1:1001583730678:web:21149a7987e017984a71d7"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const provider = new GoogleAuthProvider();
+
+let currentUser = null;
+let meds = [];
+let logs = [];
+let editingId = null;
+let pendingTimes = [];
+let historyFilter = 'all';
+let alerted = new Set();
+let unsubMeds = null;
+let unsubLogs = null;
+
+window.loginGoogle = async () => {
+  try { await signInWithPopup(auth, provider); }
+  catch (e) { showToast('Error al iniciar sesión', e.message, 'error'); }
+};
+
+window.showUserMenu = async () => {
+  if (confirm(`¿Cerrar sesión de ${currentUser.displayName}?`)) {
+    if (unsubMeds) unsubMeds();
+    if (unsubLogs) unsubLogs();
+    await signOut(auth);
+  }
+};
+
+onAuthStateChanged(auth, user => {
+  document.getElementById('loadingScreen').style.display = 'none';
+  if (user) {
+    currentUser = user;
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('appScreen').style.display = 'block';
+    const av = document.getElementById('userAvatar');
+    if (user.photoURL) av.innerHTML = `<img src="${user.photoURL}">`;
+    else av.textContent = user.displayName?.[0] || '?';
+    document.getElementById('userName').textContent = user.displayName?.split(' ')[0] || 'Usuario';
+    subscribeData();
+  } else {
+    currentUser = null;
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('appScreen').style.display = 'none';
+    meds = []; logs = [];
+  }
+});
+
+function subscribeData() {
+  const uid = currentUser.uid;
+  unsubMeds = onSnapshot(collection(db, 'users', uid, 'meds'), snap => {
+    meds = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    renderAll();
+  });
+  unsubLogs = onSnapshot(collection(db, 'users', uid, 'logs'), snap => {
+    logs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    renderAll();
+  });
+}
+
+async function saveMedDB(data, id) {
+  const uid = currentUser.uid;
+  const ref = id ? doc(db, 'users', uid, 'meds', id) : doc(collection(db, 'users', uid, 'meds'));
+  await setDoc(ref, data);
+  return ref.id;
+}
+
+async function deleteMedDB(id) {
+  await deleteDoc(doc(db, 'users', currentUser.uid, 'meds', id));
+  const logsSnap = await getDocs(collection(db, 'users', currentUser.uid, 'logs'));
+  for (const d of logsSnap.docs) {
+    if (d.data().medId === id) await deleteDoc(d.ref);
+  }
+}
+
+async function saveLogDB(logData, logId) {
+  const uid = currentUser.uid;
+  const ref = logId
+    ? doc(db, 'users', uid, 'logs', logId)
+    : doc(collection(db, 'users', uid, 'logs'));
+  await setDoc(ref, logData);
+}
+
+function dateStr(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+function today() { return dateStr(new Date()); }
+function formatDate(str) {
+  const [y,m,d] = str.split('-');
+  const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const date = new Date(y, m-1, d);
+  const t = today();
+  if (str === t) return 'Hoy';
+  const yest = new Date(); yest.setDate(yest.getDate()-1);
+  if (str === dateStr(yest)) return 'Ayer';
+  return `${days[date.getDay()]} ${d} ${months[m-1]}`;
+}
+function colorClass(c) { return `c-${c}`; }
+
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2,'0');
+  const m = String(now.getMinutes()).padStart(2,'0');
+  const s = String(now.getSeconds()).padStart(2,'0');
+  document.getElementById('clockDisplay').textContent = `${h}:${m}:${s}`;
+  checkAlerts(now);
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function checkAlerts(now) {
+  if (!currentUser) return;
+  const td = today();
+  const timeNow = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+  meds.filter(m => m.active).forEach(med => {
+    med.times.forEach(t => {
+      const key = `${td}-${med.id}-${t}`;
+      if (t === timeNow && !alerted.has(key)) {
+        const alreadyLogged = logs.find(l => l.medId===med.id && l.date===td && l.time===t);
+        if (!alreadyLogged) {
+          alerted.add(key);
+          showToast(`⏰ Hora de tu medicamento`, `${med.emoji} ${med.name} — ${med.dose}`, 'alert');
+          if (Notification.permission === 'granted') {
+            new Notification(`⏰ ${med.name}`, { body: `Es hora de tomar ${med.dose}` });
+          }
+          renderToday();
+        }
+      }
+    });
+  });
+}
+
+if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission();
 function renderToday() {
   const td = today();
   const now = new Date();
@@ -635,7 +709,7 @@ function renderToday() {
       ? `<button class="btn-take" onclick="markDose('${d.med.id}','${d.time}','taken')">✓ Tomé</button>
          <button class="btn-skip" onclick="markDose('${d.med.id}','${d.time}','missed')">✕ Omitir</button>`
       : isMissed ? `<button class="btn-take" onclick="markDose('${d.med.id}','${d.time}','taken')">↩ Tomé tarde</button>` : '';
-    return `<div class="history-item" style="margin-bottom:8px;opacity:${isMissed ? .7 : 1}">
+    return `<div class="history-item" style="margin-bottom:8px;opacity:${isMissed?.7:1}">
       <div class="history-status ${statusClass}">${statusIcon}</div>
       <div style="font-size:20px">${d.med.emoji}</div>
       <div class="history-info">
@@ -656,7 +730,6 @@ window.markDose = async (medId, time, status) => {
   if (status==='taken') showToast('Dosis registrada ✓', `${med.emoji} ${med.name} — ${time}`, 'success');
 };
 
-// ── MEDS ───────────────────────────────────────────────────────────────────
 function renderMeds() {
   const el = document.getElementById('medsList');
   if (!meds.length) {
@@ -682,7 +755,6 @@ function renderMeds() {
     </div>`).join('');
 }
 
-// ── HISTORY ────────────────────────────────────────────────────────────────
 function renderHistory() {
   const el = document.getElementById('historyList');
   let filtered = [...logs].sort((a,b) => b.ts - a.ts);
@@ -729,7 +801,6 @@ window.clearHistory = async () => {
   showToast('Historial eliminado', 'Se borró todo el registro', 'info');
 };
 
-// ── MODAL ──────────────────────────────────────────────────────────────────
 window.openModal = (id) => {
   editingId = id || null;
   pendingTimes = [];
@@ -803,7 +874,6 @@ window.deleteMed = async (id) => {
   showToast('Eliminado', med.name, 'info');
 };
 
-// ── TABS ───────────────────────────────────────────────────────────────────
 window.switchTab = (tab, el) => {
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -811,7 +881,6 @@ window.switchTab = (tab, el) => {
   el.classList.add('active');
 };
 
-// ── TOAST ──────────────────────────────────────────────────────────────────
 window.showToast = (title, msg, type) => {
   const icons = {success:'✅',error:'❌',info:'ℹ️',alert:'🔔'};
   const cont = document.getElementById('toastContainer');
@@ -825,79 +894,16 @@ window.showToast = (title, msg, type) => {
 };
 
 function showToast(title, msg, type) { window.showToast(title, msg, type); }
-
-// ── RENDER ALL ─────────────────────────────────────────────────────────────
 function renderAll() { renderToday(); renderMeds(); renderHistory(); }
 
-// ── SERVICE WORKER ─────────────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
-</script>
 
-
-    <!-- Feedback button and modal -->
-  <!-- BOTÓN DE OPINIÓN -->
-<button id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
-
-<!-- MODAL DE OPINIÓN -->
-<div id="feedbackModal" style="display:none;">
-  <div class="feedback-content">
-
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-      <h3 style="font-size:16px;font-weight:600">¿Cómo va MediClock?</h3>
-      <button onclick="document.getElementById('feedbackModal').style.display='none'"
-        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">×</button>
-    </div>
-
-    <!-- Paso 1: Estrellas -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. ¿Cómo la calificas?</p>
-    <div id="starRow" style="display:flex;gap:8px;margin-bottom:16px">
-      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-    </div>
-
-    <!-- Paso 2: Qué funciona -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. ¿Qué funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
-    <div id="goodChips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
-      <label class="fchip"><input type="checkbox" value="Recordatorios"> Recordatorios</label>
-      <label class="fchip"><input type="checkbox" value="Historial"> Historial</label>
-      <label class="fchip"><input type="checkbox" value="Diseño"> Diseño</label>
-      <label class="fchip"><input type="checkbox" value="Login"> Login</label>
-      <label class="fchip"><input type="checkbox" value="Agregar medicamentos"> Agregar medicamentos</label>
-    </div>
-
-    <!-- Paso 3: Qué falta -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. ¿Qué le falta o quitarías?</p>
-    <textarea id="mejora" rows="3"
-      style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;resize:none;margin-bottom:16px;outline:none"
-      placeholder="Escribe aquí..."></textarea>
-
-    <button onclick="sendFeedback()"
-      style="width:100%;background:#2d7dd2;color:white;border:none;border-radius:8px;padding:11px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
-      Enviar opinión
-    </button>
-  </div>
-</div>
-
-<style>
-.fchip { display:flex; align-items:center; gap:6px; background:#f7fafc; border:1px solid #e2e8f0; border-radius:20px; padding:6px 12px; font-size:13px; cursor:pointer; transition:all .15s; }
-.fchip:has(input:checked) { background:#ebf4ff; border-color:#2d7dd2; color:#2d7dd2; font-weight:500; }
-.fchip input { display:none; }
-</style>
-
-<script type="module">
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-import { getApps } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-
+  // ── FEEDBACK ───────────────────────────────────────────────────────────────
 let selectedRating = 0;
 
 document.getElementById("feedbackBtn").addEventListener("click", () => {
-  // Reset form
   selectedRating = 0;
   document.querySelectorAll(".star").forEach(s => s.style.opacity = ".4");
   document.querySelectorAll("#goodChips input").forEach(c => c.checked = false);
@@ -917,19 +923,14 @@ window.sendFeedback = async function() {
   const mejora = document.getElementById("mejora").value.trim();
   const buenos = [...document.querySelectorAll("#goodChips input:checked")].map(c => c.value);
   const sendBtn = document.querySelector("#feedbackModal button[onclick='sendFeedback()']");
-
   sendBtn.textContent = "Enviando...";
   sendBtn.disabled = true;
-
   try {
-    const app = getApps()[0];
-    const db = getFirestore(app);
-    const auth = getAuth(app);
     await addDoc(collection(db, "feedback"), {
       rating: selectedRating,
       funciona_bien: buenos,
       mejora: mejora,
-      uid: auth.currentUser ? auth.currentUser.uid : "anonimo",
+      uid: currentUser ? currentUser.uid : "anonimo",
       fecha: new Date().toISOString()
     });
     document.querySelector(".feedback-content").innerHTML = `
@@ -948,24 +949,9 @@ window.sendFeedback = async function() {
     alert("Error al enviar. Intenta de nuevo.");
   }
 };
+
 </script>
-
-
 
 </body>
 </html>
-
-
- 
-
   
-
-
-
-
-
-
-
-
-
-
