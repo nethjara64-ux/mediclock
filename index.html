@@ -97,6 +97,7 @@
   .btn-secondary { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all .2s; }
   .btn-secondary:hover { background: var(--border); }
 
+
   /* MODAL */
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.open { display: flex; }
@@ -207,6 +208,46 @@
     .clock-display { display: none; }
     .history-action { flex-direction: column; }
   }
+
+  .feedback-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#2d7dd2;
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    padding:12px 20px;
+    font-size:16px;
+    cursor:pointer;
+    z-index:99999;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+#feedbackModal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:100000;
+}
+
+.feedback-content{
+    background:#fff;
+    width:90%;
+    max-width:400px;
+    padding:20px;
+    border-radius:12px;
+}
+
+.feedback-content select,
+.feedback-content textarea{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
 </style>
 </head>
 <body>
@@ -793,5 +834,66 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
 </script>
+
+
+    <!-- Feedback button and modal -->
+  <!-- BOTÓN DE OPINIÓN -->
+<button id="feedbackBtn" class="feedback-btn">
+  💬 Opinión
+</button>
+
+<!-- MODAL DE COMENTARIOS -->
+<div id="feedbackModal" style="display:none;">
+  <div class="feedback-content">
+    <h3>Tu opinión sobre MediClock</h3>
+
+    <select id="rating">
+      <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+      <option value="4">⭐⭐⭐⭐ Muy buena</option>
+      <option value="3">⭐⭐⭐ Buena</option>
+      <option value="2">⭐⭐ Regular</option>
+      <option value="1">⭐ Mala</option>
+    </select>
+
+    <textarea
+      id="comment"
+      placeholder="¿Qué te gustó o qué mejorarías?"
+      rows="4"></textarea>
+
+    <button onclick="sendFeedback()">
+      Enviar
+    </button>
+  </div>
+</div>
+
+<script>
+const btn = document.getElementById("feedbackBtn");
+
+btn.addEventListener("click", () => {
+  document.getElementById("feedbackModal").style.display = "flex";
+});
+
+function sendFeedback() {
+
+  const rating = document.getElementById("rating").value;
+  const comment = document.getElementById("comment").value;
+
+  const text = `MediClock Beta
+
+Calificación: ${rating}/5
+
+Comentario:
+${comment}`;
+
+  window.open(
+    `https://wa.me/573001234567?text=${encodeURIComponent(text)}`,
+    '_blank'
+  );
+}
+</script>
+
+
+
 </body>
 </html>
+
