@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -619,45 +619,41 @@ function renderToday() {
       <button class="btn-take-now" onclick="markDose('${d.med.id}','${d.time}','taken')">TomÃ© âœ“</button>
     </div>`).join('');
 
- 
-    const el = document.getElementById('todayList');
+  const el = document.getElementById('todayList');
   if (!allDoses.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📋</div><h3>Sin medicamentos hoy</h3><p>Agrega tus medicamentos en la pestaña "Medicamentos"</p></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">ðŸ“‹</div><h3>Sin medicamentos hoy</h3><p>Agrega tus medicamentos en la pestaÃ±a "Medicamentos"</p></div>`;
     return;
   }
   el.innerHTML = allDoses.map(d => {
-    const logId     = `${td}-${d.med.id}-${d.time}`;
-    const isTaken   = d.status === 'taken';
-    const isMissed  = d.status === 'missed';
-    const isPending = d.status === 'pending';
-    const statusIcon  = isTaken ? '✅' : isMissed ? '✕' : '○';
-    const statusLabel = isTaken ? 'Tomado' : isMissed ? 'Perdida' : 'Pendiente';
-    const statusClass = isTaken ? 'taken'  : isMissed ? 'missed'  : 'pending';
-    const pillBg    = isTaken ? '#E1F5EE' : isMissed ? '#FCEBEB' : '#FAEEDA';
-    const pillColor = isTaken ? '#0F6E56' : isMissed ? '#A32D2D' : '#854F0B';
+    const isTaken = d.status==='taken', isMissed = d.status==='missed', isPending = d.status==='pending';
+    const statusIcon = isTaken?'âœ“':isMissed?'âœ•':'â—‹';
+    const statusClass = isTaken?'status-taken':isMissed?'status-missed':'status-pending';
+    const actions = `
+<button class="btn-take"
+onclick="markDose('${d.med.id}','${d.time}','taken')">
+âœ“ Tomar ahora
+</button>
 
-    const actionBtn = isTaken
-      ? `<button class="btn-take taken" disabled data-dose-btn="${logId}">✅ Tomado</button>`
-      : isMissed
-      ? `<div class="dual-actions">
-           <button class="btn-take missed-btn" disabled data-dose-btn="${logId}">✕ Perdida</button>
-           <button class="btn-take retry" onclick="markDose('${d.med.id}','${d.time}','taken')" data-dose-btn="${logId}-retry">💊 Tomar de todas formas</button>
-         </div>`
-      : `<button class="btn-take" onclick="markDose('${d.med.id}','${d.time}','taken')" data-dose-btn="${logId}">✓ Tomar ahora</button>`;
-
-    return `
-      <div class="dose-card ${statusClass}" id="card-${logId}">
-        <div style="display:flex;align-items:center;gap:14px">
-          <div style="font-size:38px;flex-shrink:0">${escapeHtml(d.med.emoji)}</div>
-          <div style="flex:1">
-            <div style="font-size:20px;font-weight:700;color:var(--text,#111)">${escapeHtml(d.med.name)}</div>
-            <div style="font-size:16px;color:#888;margin-top:4px">${escapeHtml(d.med.dose)} · ${escapeHtml(d.time)}</div>
-          </div>
-          <div style="font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;background:${pillBg};color:${pillColor}">${statusIcon} ${statusLabel}</div>
-        </div>
-        ${actionBtn}
-      </div>`;
+${!isTaken ?
+`<button class="btn-skip"
+onclick="markDose('${d.med.id}','${d.time}','missed')">
+âœ• Omitir
+</button>`
+: ''}
+`;
+    return `<div class="history-item" style="margin-bottom:8px;opacity:${isMissed?.7:1}">
+      <div class="history-status ${statusClass}">${statusIcon}</div>
+      <div style="font-size:20px">${escapeHtml(d.med.emoji)}</div>
+      <div class="history-info">
+        <div class="history-name">${escapeHtml(d.med.name)}</div>
+        <div class="history-detail">${escapeHtml(d.med.dose)}${d.med.notes?' Â· '+escapeHtml(d.med.notes):''}</div>
+      </div>
+      <div class="history-time">${d.time}</div>
+      <div class="history-action">${actions}</div>
+    </div>`;
   }).join('');
+}
+javascript
 async function markDose(medId, time, status) {
   if (!currentUser) return;
 
