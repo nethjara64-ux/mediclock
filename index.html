@@ -1,10 +1,10 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MediClock — Recordatorio de Medicamentos</title>
+<title>MediClock â€” Recordatorio de Medicamentos</title>
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -63,12 +63,7 @@
   .btn-primary:hover { background: #1a65bf; }
   .btn-secondary { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all .2s; }
   .btn-secondary:hover { background: var(--border); }
-<<<<<<< HEAD
-=======
-
-
   /* MODAL */
->>>>>>> 78bf89dd77c0b0dc369ebf851e922ffaaac344db
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--surface); border-radius: 18px; width: 100%; max-width: 460px; box-shadow: 0 20px 60px rgba(0,0,0,.2); overflow: hidden; animation: modalIn .25s cubic-bezier(.34,1.56,.64,1); }
@@ -155,7 +150,6 @@
   .c-green { background: var(--green-light); color: var(--green); }
   .c-orange { background: var(--orange-light); color: var(--orange); }
   .c-purple { background: var(--purple-light); color: var(--purple); }
-<<<<<<< HEAD
   @media (max-width: 600px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .stats-row .stat-card:last-child { grid-column: 1 / -1; } .form-grid { grid-template-columns: 1fr; } .clock-display { display: none; } .history-action { flex-direction: column; } }
   .feedback-btn { position:fixed; bottom:20px; right:20px; background:#2d7dd2; color:#fff; border:none; border-radius:50px; padding:12px 20px; font-size:15px; font-weight:500; cursor:pointer; z-index:99999; box-shadow:0 4px 10px rgba(0,0,0,.25); font-family:'DM Sans',sans-serif; }
   #feedbackModal { position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; justify-content:center; align-items:center; z-index:100000; }
@@ -163,56 +157,6 @@
   .fchip { display:flex; align-items:center; gap:6px; background:#f7fafc; border:1px solid #e2e8f0; border-radius:20px; padding:6px 12px; font-size:13px; cursor:pointer; transition:all .15s; }
   .fchip:has(input:checked) { background:#ebf4ff; border-color:#2d7dd2; color:#2d7dd2; font-weight:500; }
   .fchip input { display:none; }
-=======
-
-  @media (max-width: 600px) {
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .stats-row .stat-card:last-child { grid-column: 1 / -1; }
-    .form-grid { grid-template-columns: 1fr; }
-    .clock-display { display: none; }
-    .history-action { flex-direction: column; }
-  }
-
-  .feedback-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#2d7dd2;
-    color:#fff;
-    border:none;
-    border-radius:50px;
-    padding:12px 20px;
-    font-size:16px;
-    cursor:pointer;
-    z-index:99999;
-    box-shadow:0 4px 10px rgba(0,0,0,.25);
-}
-
-#feedbackModal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.5);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:100000;
-}
-
-.feedback-content{
-    background:#fff;
-    width:90%;
-    max-width:400px;
-    padding:20px;
-    border-radius:12px;
-}
-
-.feedback-content select,
-.feedback-content textarea{
-    width:100%;
-    margin-top:10px;
-    margin-bottom:10px;
-}
->>>>>>> 78bf89dd77c0b0dc369ebf851e922ffaaac344db
 </style>
 </head>
 <body>
@@ -331,7 +275,7 @@
   <div class="modal">
     <div class="modal-header">
       <div class="modal-title" id="modalTitle">Agregar medicamento</div>
-      <button class="modal-close" onclick="closeModal()">×</button>
+      <button class="modal-close" onclick="closeModal()">Ã—</button>
     </div>
     <div class="modal-body">
       <div class="form-grid">
@@ -341,15 +285,15 @@
         </div>
         <div class="form-group">
           <label for="medDose">Dosis</label>
-          <input type="text" id="medDose" placeholder="Ej: 1 cápsula">
+          <input type="text" id="medDose" placeholder="Ej: 1 cÃ¡psula">
         </div>
         <div class="form-group">
-          <label for="medEmoji">Emoji / ícono</label>
-          <input type="text" id="medEmoji" placeholder="💊" maxlength="2" value="💊">
+          <label for="medEmoji">Emoji / Ã­cono</label>
+          <input type="text" id="medEmoji" placeholder="ðŸ’Š" maxlength="2" value="ðŸ’Š">
         </div>
         <div class="form-group full">
           <label for="medNotes">Indicaciones (opcional)</label>
-          <textarea id="medNotes" placeholder="Ej: Tomar con el estómago vacío" rows="2"></textarea>
+          <textarea id="medNotes" placeholder="Ej: Tomar con el estÃ³mago vacÃ­o" rows="2"></textarea>
         </div>
         <div class="form-group full">
           <label for="newTime">Horarios</label>
@@ -371,7 +315,7 @@
         <div class="form-group">
           <label for="medActive">Activo</label>
           <select id="medActive">
-            <option value="1">Sí</option>
+            <option value="1">SÃ­</option>
             <option value="0">No</option>
           </select>
         </div>
@@ -386,44 +330,44 @@
     </div>
   </div>
 </div>
-<!-- BOTÓN OPINIÓN -->
-<button id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
+<!-- BOTÃ“N OPINIÃ“N -->
+<button id="feedbackBtn" class="feedback-btn">ðŸ’¬ OpiniÃ³n</button>
 
-<!-- MODAL OPINIÓN -->
+<!-- MODAL OPINIÃ“N -->
 <div id="feedbackModal" style="display:none;">
   <div class="feedback-content">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-      <h3 style="font-size:16px;font-weight:600">¿Cómo va MediClock?</h3>
+      <h3 style="font-size:16px;font-weight:600">Â¿CÃ³mo va MediClock?</h3>
       <button onclick="document.getElementById('feedbackModal').style.display='none'"
-        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">×</button>
+        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">Ã—</button>
     </div>
 
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. ¿Cómo la calificas?</p>
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. Â¿CÃ³mo la calificas?</p>
     <div id="starRow" style="display:flex;gap:8px;margin-bottom:16px">
-      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">â­</span>
+      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">â­</span>
+      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">â­</span>
+      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">â­</span>
+      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">â­</span>
     </div>
 
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. ¿Qué funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. Â¿QuÃ© funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
     <div id="goodChips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
       <label class="fchip"><input type="checkbox" value="Recordatorios"> Recordatorios</label>
       <label class="fchip"><input type="checkbox" value="Historial"> Historial</label>
-      <label class="fchip"><input type="checkbox" value="Diseño"> Diseño</label>
+      <label class="fchip"><input type="checkbox" value="DiseÃ±o"> DiseÃ±o</label>
       <label class="fchip"><input type="checkbox" value="Login"> Login</label>
       <label class="fchip"><input type="checkbox" value="Agregar medicamentos"> Agregar medicamentos</label>
     </div>
 
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. ¿Qué le falta o quitarías?</p>
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. Â¿QuÃ© le falta o quitarÃ­as?</p>
     <textarea id="mejora" rows="3"
       style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;resize:none;margin-bottom:16px;outline:none"
-      placeholder="Escribe aquí..."></textarea>
+      placeholder="Escribe aquÃ­..."></textarea>
 
     <button onclick="sendFeedback()"
       style="width:100%;background:#2d7dd2;color:white;border:none;border-radius:8px;padding:11px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
-      Enviar opinión
+      Enviar opiniÃ³n
     </button>
   </div>
 </div>
@@ -460,11 +404,11 @@ let unsubLogs = null;
 
 window.loginGoogle = async () => {
   try { await signInWithPopup(auth, provider); }
-  catch (e) { showToast('Error al iniciar sesión', e.message, 'error'); }
+  catch (e) { showToast('Error al iniciar sesiÃ³n', e.message, 'error'); }
 };
 
 window.showUserMenu = async () => {
-  if (confirm(`¿Cerrar sesión de ${currentUser.displayName}?`)) {
+  if (confirm(`Â¿Cerrar sesiÃ³n de ${currentUser.displayName}?`)) {
     if (unsubMeds) unsubMeds();
     if (unsubLogs) unsubLogs();
     await signOut(auth);
@@ -580,7 +524,7 @@ function today() { return dateStr(new Date()); }
 function formatDate(str) {
   const [y,m,d] = str.split('-');
   const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-  const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const days = ['Dom','Lun','Mar','MiÃ©','Jue','Vie','SÃ¡b'];
   const date = new Date(y, m-1, d);
   const t = today();
   if (str === t) return 'Hoy';
@@ -624,9 +568,9 @@ function checkAlerts(now) {
         const alreadyLogged = logs.find(l => l.medId===med.id && l.date===td && l.time===t);
         if (!alreadyLogged) {
           alerted.add(key);
-          showToast(`⏰ Hora de tu medicamento`, `${med.emoji} ${med.name} — ${med.dose}`, 'alert');
+          showToast(`â° Hora de tu medicamento`, `${med.emoji} ${med.name} â€” ${med.dose}`, 'alert');
           if (Notification.permission === 'granted') {
-            new Notification(`⏰ ${med.name}`, { body: `Es hora de tomar ${med.dose}` });
+            new Notification(`â° ${med.name}`, { body: `Es hora de tomar ${med.dose}` });
           }
           renderToday();
         }
@@ -666,31 +610,31 @@ function renderToday() {
     <div class="alert-banner">
       <div class="alert-banner-icon">${escapeHtml(d.med.emoji)}</div>
       <div class="alert-banner-info">
-        <div class="alert-banner-title">¡Hora de ${escapeHtml(d.med.name)}!</div>
-        <div class="alert-banner-sub">${escapeHtml(d.med.dose)} · ${escapeHtml(d.time)}</div>
+        <div class="alert-banner-title">Â¡Hora de ${escapeHtml(d.med.name)}!</div>
+        <div class="alert-banner-sub">${escapeHtml(d.med.dose)} Â· ${escapeHtml(d.time)}</div>
       </div>
-      <button class="btn-take-now" onclick="markDose('${d.med.id}','${d.time}','taken')">Tomé ✓</button>
+      <button class="btn-take-now" onclick="markDose('${d.med.id}','${d.time}','taken')">TomÃ© âœ“</button>
     </div>`).join('');
 
   const el = document.getElementById('todayList');
   if (!allDoses.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📋</div><h3>Sin medicamentos hoy</h3><p>Agrega tus medicamentos en la pestaña "Medicamentos"</p></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">ðŸ“‹</div><h3>Sin medicamentos hoy</h3><p>Agrega tus medicamentos en la pestaÃ±a "Medicamentos"</p></div>`;
     return;
   }
   el.innerHTML = allDoses.map(d => {
     const isTaken = d.status==='taken', isMissed = d.status==='missed', isPending = d.status==='pending';
-    const statusIcon = isTaken?'✓':isMissed?'✕':'○';
+    const statusIcon = isTaken?'âœ“':isMissed?'âœ•':'â—‹';
     const statusClass = isTaken?'status-taken':isMissed?'status-missed':'status-pending';
     const actions = `
 <button class="btn-take"
 onclick="markDose('${d.med.id}','${d.time}','taken')">
-✓ Tomar ahora
+âœ“ Tomar ahora
 </button>
 
 ${!isTaken ?
 `<button class="btn-skip"
 onclick="markDose('${d.med.id}','${d.time}','missed')">
-✕ Omitir
+âœ• Omitir
 </button>`
 : ''}
 `;
@@ -699,7 +643,7 @@ onclick="markDose('${d.med.id}','${d.time}','missed')">
       <div style="font-size:20px">${escapeHtml(d.med.emoji)}</div>
       <div class="history-info">
         <div class="history-name">${escapeHtml(d.med.name)}</div>
-        <div class="history-detail">${escapeHtml(d.med.dose)}${d.med.notes?' · '+escapeHtml(d.med.notes):''}</div>
+        <div class="history-detail">${escapeHtml(d.med.dose)}${d.med.notes?' Â· '+escapeHtml(d.med.notes):''}</div>
       </div>
       <div class="history-time">${d.time}</div>
       <div class="history-action">${actions}</div>
@@ -712,13 +656,13 @@ window.markDose = async (medId, time, status) => {
   const logId = `${medId}_${td}_${time}`;
   await saveLogDB({ medId, date: td, time, status, ts: Date.now() }, logId);
   const med = meds.find(m => m.id===medId);
-  if (status==='taken') showToast('Dosis registrada ✓', `${med.emoji} ${med.name} — ${time}`, 'success');
+  if (status==='taken') showToast('Dosis registrada âœ“', `${med.emoji} ${med.name} â€” ${time}`, 'success');
 };
 
 function renderMeds() {
   const el = document.getElementById('medsList');
   if (!meds.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">💊</div><h3>Sin medicamentos</h3><p>Agrega tu primer medicamento para comenzar</p></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">ðŸ’Š</div><h3>Sin medicamentos</h3><p>Agrega tu primer medicamento para comenzar</p></div>`;
     return;
   }
   el.innerHTML = meds.map(med => `
@@ -726,7 +670,7 @@ function renderMeds() {
       <div class="med-icon ${safeColorClass(med.color)}">${escapeHtml(med.emoji)}</div>
       <div class="med-info">
         <div class="med-name">${escapeHtml(med.name)}${!med.active?' <span style="font-size:11px;color:var(--text3)">(inactivo)</span>':''}</div>
-        <div class="med-dose">${escapeHtml(med.dose)}${med.notes?' · '+escapeHtml(med.notes):''}</div>
+        <div class="med-dose">${escapeHtml(med.dose)}${med.notes?' Â· '+escapeHtml(med.notes):''}</div>
         <div class="med-times">${med.times.map(t=>`<span class="time-tag ${safeColorClass(med.color)}">${escapeHtml(t)}</span>`).join('')}</div>
       </div>
       <div class="med-actions">
@@ -745,7 +689,7 @@ function renderHistory() {
   let filtered = [...logs].sort((a,b) => b.ts - a.ts);
   if (historyFilter !== 'all') filtered = filtered.filter(l => l.status===historyFilter);
   if (!filtered.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📂</div><h3>Sin registros</h3><p>El historial aparecerá aquí</p></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">ðŸ“‚</div><h3>Sin registros</h3><p>El historial aparecerÃ¡ aquÃ­</p></div>`;
     return;
   }
   const byDate = {};
@@ -759,11 +703,11 @@ function renderHistory() {
           if (!med) return '';
           const isTaken = log.status==='taken';
           return `<div class="history-item">
-            <div class="history-status ${isTaken?'status-taken':'status-missed'}">${isTaken?'✓':'✕'}</div>
+            <div class="history-status ${isTaken?'status-taken':'status-missed'}">${isTaken?'âœ“':'âœ•'}</div>
             <div style="font-size:18px">${escapeHtml(med.emoji)}</div>
             <div class="history-info">
               <div class="history-name">${escapeHtml(med.name)}</div>
-              <div class="history-detail">${escapeHtml(med.dose)} · ${escapeHtml(log.time)}</div>
+              <div class="history-detail">${escapeHtml(med.dose)} Â· ${escapeHtml(log.time)}</div>
             </div>
             <div class="history-time" style="color:${isTaken?'var(--green)':'var(--red)'}">${isTaken?'Tomada':'Omitida'}</div>
           </div>`;
@@ -780,10 +724,10 @@ window.filterHistory = (f, el) => {
 };
 
 window.clearHistory = async () => {
-  if (!confirm('¿Eliminar todo el historial?')) return;
+  if (!confirm('Â¿Eliminar todo el historial?')) return;
   const snap = await getDocs(collection(db, 'users', currentUser.uid, 'logs'));
   for (const d of snap.docs) await deleteDoc(d.ref);
-  showToast('Historial eliminado', 'Se borró todo el registro', 'info');
+  showToast('Historial eliminado', 'Se borrÃ³ todo el registro', 'info');
 };
 
 window.openModal = (id) => {
@@ -802,7 +746,7 @@ window.openModal = (id) => {
   } else {
     document.getElementById('medName').value='';
     document.getElementById('medDose').value='';
-    document.getElementById('medEmoji').value='💊';
+    document.getElementById('medEmoji').value='ðŸ’Š';
     document.getElementById('medNotes').value='';
     document.getElementById('medColor').value='blue';
     document.getElementById('medActive').value='1';
@@ -827,7 +771,7 @@ window.removeTime = (t) => { pendingTimes = pendingTimes.filter(x=>x!==t); rende
 
 function renderTimesRow() {
   document.getElementById('timesRow').innerHTML = pendingTimes.map(t =>
-    `<div class="time-chip">${t}<button onclick="removeTime('${t}')">×</button></div>`).join('');
+    `<div class="time-chip">${t}<button onclick="removeTime('${t}')">Ã—</button></div>`).join('');
 }
 
 window.saveMed = async () => {
@@ -838,7 +782,7 @@ window.saveMed = async () => {
   if (!pendingTimes.length) return showToast('Falta el horario', 'Agrega al menos una hora', 'error');
   const data = {
     name, dose,
-    emoji: document.getElementById('medEmoji').value || '💊',
+    emoji: document.getElementById('medEmoji').value || 'ðŸ’Š',
     notes: document.getElementById('medNotes').value.trim(),
     color: document.getElementById('medColor').value,
     times: [...pendingTimes],
@@ -854,7 +798,7 @@ window.editMed = (id) => window.openModal(id);
 
 window.deleteMed = async (id) => {
   const med = meds.find(m=>m.id===id);
-  if (!confirm(`¿Eliminar ${med.name}?`)) return;
+  if (!confirm(`Â¿Eliminar ${med.name}?`)) return;
   await deleteMedDB(id);
   showToast('Eliminado', med.name, 'info');
 };
@@ -867,13 +811,13 @@ window.switchTab = (tab, el) => {
 };
 
 window.showToast = (title, msg, type) => {
-  const icons = {success:'✅',error:'❌',info:'ℹ️',alert:'🔔'};
+  const icons = {success:'âœ…',error:'âŒ',info:'â„¹ï¸',alert:'ðŸ””'};
   const cont = document.getElementById('toastContainer');
   const t = document.createElement('div');
   t.className = 'toast';
-  t.innerHTML = `<div class="toast-icon">${icons[type]||'🔔'}</div>
+  t.innerHTML = `<div class="toast-icon">${icons[type]||'ðŸ””'}</div>
     <div class="toast-content"><div class="toast-title">${escapeHtml(title)}</div><div class="toast-msg">${escapeHtml(msg)}</div></div>
-    <button class="toast-close" onclick="this.closest('.toast').remove()">×</button>`;
+    <button class="toast-close" onclick="this.closest('.toast').remove()">Ã—</button>`;
   cont.appendChild(t);
   setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(),300); }, 4000);
 };
@@ -884,7 +828,7 @@ function renderAll() { renderToday(); renderMeds(); renderHistory(); }
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js?v=2').then(reg => reg.update()).catch(()=>{});
 }
-// ── FEEDBACK ───────────────────────────────────────────────────────────────
+// â”€â”€ FEEDBACK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let selectedRating = 0;
 
 document.getElementById("feedbackBtn").addEventListener("click", () => {
@@ -903,7 +847,7 @@ window.setStar = function(n) {
 };
 
 window.sendFeedback = async function() {
-  if (!selectedRating) { alert("Por favor selecciona una calificación ⭐"); return; }
+  if (!selectedRating) { alert("Por favor selecciona una calificaciÃ³n â­"); return; }
   const mejora = document.getElementById("mejora").value.trim();
   const buenos = [...document.querySelectorAll("#goodChips input:checked")].map(c => c.value);
   const sendBtn = document.querySelector("#feedbackModal button[onclick='sendFeedback()']");
@@ -919,8 +863,8 @@ window.sendFeedback = async function() {
     });
     document.querySelector(".feedback-content").innerHTML = `
       <div style="text-align:center;padding:24px 0">
-        <div style="font-size:52px;margin-bottom:12px">🙏</div>
-        <h3 style="margin-bottom:8px;font-size:17px">¡Gracias por tu opinión!</h3>
+        <div style="font-size:52px;margin-bottom:12px">ðŸ™</div>
+        <h3 style="margin-bottom:8px;font-size:17px">Â¡Gracias por tu opiniÃ³n!</h3>
         <p style="color:#4a5568;font-size:14px;margin-bottom:20px;line-height:1.5">Tu comentario nos ayuda a mejorar MediClock.</p>
         <button onclick="document.getElementById('feedbackModal').style.display='none'"
           style="background:#2d7dd2;color:white;border:none;border-radius:8px;padding:10px 28px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
@@ -928,7 +872,7 @@ window.sendFeedback = async function() {
         </button>
       </div>`;
   } catch(e) {
-    sendBtn.textContent = "Enviar opinión";
+    sendBtn.textContent = "Enviar opiniÃ³n";
     sendBtn.disabled = false;
     alert("Error al enviar. Intenta de nuevo.");
   }
@@ -936,126 +880,6 @@ window.sendFeedback = async function() {
 
 </script>
 
-<<<<<<< HEAD
-=======
-
-    <!-- Feedback button and modal -->
-  <!-- BOTÓN DE OPINIÓN -->
-<button id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
-
-<!-- MODAL DE OPINIÓN -->
-<div id="feedbackModal" style="display:none;">
-  <div class="feedback-content">
-
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-      <h3 style="font-size:16px;font-weight:600">¿Cómo va MediClock?</h3>
-      <button onclick="document.getElementById('feedbackModal').style.display='none'"
-        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">×</button>
-    </div>
-
-    <!-- Paso 1: Estrellas -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. ¿Cómo la calificas?</p>
-    <div id="starRow" style="display:flex;gap:8px;margin-bottom:16px">
-      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
-    </div>
-
-    <!-- Paso 2: Qué funciona -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. ¿Qué funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
-    <div id="goodChips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
-      <label class="fchip"><input type="checkbox" value="Recordatorios"> Recordatorios</label>
-      <label class="fchip"><input type="checkbox" value="Historial"> Historial</label>
-      <label class="fchip"><input type="checkbox" value="Diseño"> Diseño</label>
-      <label class="fchip"><input type="checkbox" value="Login"> Login</label>
-      <label class="fchip"><input type="checkbox" value="Agregar medicamentos"> Agregar medicamentos</label>
-    </div>
-
-    <!-- Paso 3: Qué falta -->
-    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. ¿Qué le falta o quitarías?</p>
-    <textarea id="mejora" rows="3"
-      style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;resize:none;margin-bottom:16px;outline:none"
-      placeholder="Escribe aquí..."></textarea>
-
-    <button onclick="sendFeedback()"
-      style="width:100%;background:#2d7dd2;color:white;border:none;border-radius:8px;padding:11px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
-      Enviar opinión
-    </button>
-  </div>
-</div>
-
-<style>
-.fchip { display:flex; align-items:center; gap:6px; background:#f7fafc; border:1px solid #e2e8f0; border-radius:20px; padding:6px 12px; font-size:13px; cursor:pointer; transition:all .15s; }
-.fchip:has(input:checked) { background:#ebf4ff; border-color:#2d7dd2; color:#2d7dd2; font-weight:500; }
-.fchip input { display:none; }
-</style>
-
-<script type="module">
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-import { getApps } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-
-let selectedRating = 0;
-
-document.getElementById("feedbackBtn").addEventListener("click", () => {
-  // Reset form
-  selectedRating = 0;
-  document.querySelectorAll(".star").forEach(s => s.style.opacity = ".4");
-  document.querySelectorAll("#goodChips input").forEach(c => c.checked = false);
-  document.getElementById("mejora").value = "";
-  document.getElementById("feedbackModal").style.display = "flex";
-});
-
-window.setStar = function(n) {
-  selectedRating = n;
-  document.querySelectorAll(".star").forEach(s => {
-    s.style.opacity = Number(s.dataset.v) <= n ? "1" : ".4";
-  });
-};
-
-window.sendFeedback = async function() {
-  if (!selectedRating) { alert("Por favor selecciona una calificación ⭐"); return; }
-  const mejora = document.getElementById("mejora").value.trim();
-  const buenos = [...document.querySelectorAll("#goodChips input:checked")].map(c => c.value);
-  const sendBtn = document.querySelector("#feedbackModal button[onclick='sendFeedback()']");
-
-  sendBtn.textContent = "Enviando...";
-  sendBtn.disabled = true;
-
-  try {
-    const app = getApps()[0];
-    const db = getFirestore(app);
-    const auth = getAuth(app);
-    await addDoc(collection(db, "feedback"), {
-      rating: selectedRating,
-      funciona_bien: buenos,
-      mejora: mejora,
-      uid: auth.currentUser ? auth.currentUser.uid : "anonimo",
-      fecha: new Date().toISOString()
-    });
-    document.querySelector(".feedback-content").innerHTML = `
-      <div style="text-align:center;padding:24px 0">
-        <div style="font-size:52px;margin-bottom:12px">🙏</div>
-        <h3 style="margin-bottom:8px;font-size:17px">¡Gracias por tu opinión!</h3>
-        <p style="color:#4a5568;font-size:14px;margin-bottom:20px;line-height:1.5">Tu comentario nos ayuda a mejorar MediClock.</p>
-        <button onclick="document.getElementById('feedbackModal').style.display='none'"
-          style="background:#2d7dd2;color:white;border:none;border-radius:8px;padding:10px 28px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
-          Cerrar
-        </button>
-      </div>`;
-  } catch(e) {
-    sendBtn.textContent = "Enviar opinión";
-    sendBtn.disabled = false;
-    alert("Error al enviar. Intenta de nuevo.");
-  }
-};
-</script>
-
-
-
->>>>>>> 78bf89dd77c0b0dc369ebf851e922ffaaac344db
 </body>
 </html>
 
