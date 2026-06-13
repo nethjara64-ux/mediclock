@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,59 +29,27 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-
-  /* LOGIN */
-  .login-screen {
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, #1a365d 0%, #2d7dd2 100%); padding: 20px;
-  }
-  .login-card {
-    background: white; border-radius: 24px; padding: 48px 40px; text-align: center;
-    max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,.3);
-  }
-  .login-logo {
-    width: 72px; height: 72px; border-radius: 20px; background: var(--accent);
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
-  }
+  .login-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1a365d 0%, #2d7dd2 100%); padding: 20px; }
+  .login-card { background: white; border-radius: 24px; padding: 48px 40px; text-align: center; max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .login-logo { width: 72px; height: 72px; border-radius: 20px; background: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
   .login-title { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
   .login-title span { color: var(--accent); }
   .login-sub { font-size: 15px; color: var(--text2); margin-bottom: 36px; line-height: 1.5; }
-  .btn-google {
-    width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid var(--border);
-    background: white; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
-    cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px;
-    transition: all .2s; color: var(--text);
-  }
+  .btn-google { width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid var(--border); background: white; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; transition: all .2s; color: var(--text); }
   .btn-google:hover { background: var(--surface2); border-color: var(--accent); box-shadow: var(--shadow); }
   .btn-google svg { flex-shrink: 0; }
   .login-footer { margin-top: 24px; font-size: 12px; color: var(--text3); }
-
-  /* HEADER */
-  .header {
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 0 20px; display: flex; align-items: center; justify-content: space-between;
-    height: 64px; position: sticky; top: 0; z-index: 100;
-  }
+  .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; }
   .logo { display: flex; align-items: center; gap: 10px; }
   .logo-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--accent); display: flex; align-items: center; justify-content: center; }
   .logo-name { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
   .logo-name span { color: var(--accent); }
   .header-right { display: flex; align-items: center; gap: 12px; }
   .clock-display { font-family: 'DM Mono', monospace; font-size: 18px; font-weight: 500; }
-  .user-btn {
-    display: flex; align-items: center; gap: 8px; padding: 6px 10px;
-    border-radius: 10px; border: 1px solid var(--border); background: none; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text2); transition: all .2s;
-  }
+  .user-btn { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 10px; border: 1px solid var(--border); background: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text2); transition: all .2s; }
   .user-btn:hover { background: var(--surface2); }
-  .user-avatar {
-    width: 28px; height: 28px; border-radius: 50%; background: var(--accent-light);
-    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--accent);
-    overflow: hidden;
-  }
+  .user-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--accent); overflow: hidden; }
   .user-avatar img { width: 100%; height: 100%; object-fit: cover; }
-
-  /* MAIN */
   .main { max-width: 900px; margin: 0 auto; padding: 28px 20px; }
   .tabs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px; width: fit-content; margin-bottom: 28px; }
   .tab { padding: 8px 20px; border-radius: 9px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; background: none; color: var(--text2); transition: all .2s; }
@@ -90,14 +59,10 @@
   .panel.active { display: block; }
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .section-title { font-size: 15px; font-weight: 600; }
-
-  /* BUTTONS */
   .btn-primary { background: var(--accent); color: white; border: none; border-radius: var(--radius-sm); padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all .2s; }
   .btn-primary:hover { background: #1a65bf; }
   .btn-secondary { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all .2s; }
   .btn-secondary:hover { background: var(--border); }
-
-  /* MODAL */
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--surface); border-radius: 18px; width: 100%; max-width: 460px; box-shadow: 0 20px 60px rgba(0,0,0,.2); overflow: hidden; animation: modalIn .25s cubic-bezier(.34,1.56,.64,1); }
@@ -118,8 +83,6 @@
   .time-chip button { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 14px; }
   .add-time { display: flex; gap: 8px; margin-top: 8px; }
   .add-time input { flex: 1; }
-
-  /* MED CARDS */
   .meds-grid { display: grid; gap: 12px; }
   .med-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: flex; align-items: center; gap: 16px; box-shadow: var(--shadow); transition: box-shadow .2s; }
   .med-card:hover { box-shadow: var(--shadow-md); }
@@ -133,14 +96,10 @@
   .icon-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border); background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text3); transition: all .2s; }
   .icon-btn:hover { background: var(--surface2); color: var(--text); }
   .icon-btn.danger:hover { background: var(--red-light); color: var(--red); border-color: #feb2b2; }
-
-  /* EMPTY */
   .empty { text-align: center; padding: 60px 20px; }
   .empty-icon { font-size: 48px; margin-bottom: 16px; }
   .empty h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
   .empty p { font-size: 14px; color: var(--text3); }
-
-  /* HISTORY */
   .history-filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
   .filter-chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text2); transition: all .2s; }
   .filter-chip.active { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
@@ -161,24 +120,18 @@
   .btn-take:hover { background: #c6f6d5; }
   .btn-skip { background: var(--red-light); color: var(--red); border: 1px solid #feb2b2; border-radius: 6px; padding: 5px 12px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all .2s; }
   .btn-skip:hover { background: #fed7d7; }
-
-  /* STATS */
   .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow); }
   .stat-num { font-size: 32px; font-weight: 600; line-height: 1; margin-bottom: 6px; }
   .stat-label { font-size: 12px; color: var(--text3); font-weight: 500; }
   .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 8px; }
   .progress-fill { height: 100%; border-radius: 3px; transition: width .6s ease; }
-
-  /* ALERT */
   .alert-banner { background: linear-gradient(135deg, #2d7dd2 0%, #1a5fa5 100%); color: white; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
   .alert-banner-icon { font-size: 24px; }
   .alert-banner-info { flex: 1; }
   .alert-banner-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
   .alert-banner-sub { font-size: 13px; opacity: .85; }
   .btn-take-now { background: white; color: var(--accent); border: none; border-radius: var(--radius-sm); padding: 8px 16px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-
-  /* TOAST */
   .toast-container { position: fixed; top: 76px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 8px; }
   .toast { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 12px; min-width: 280px; max-width: 360px; animation: toastIn .3s ease; }
   @keyframes toastIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
@@ -189,24 +142,20 @@
   .toast-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
   .toast-msg { font-size: 12px; color: var(--text2); }
   .toast-close { background: none; border: none; color: var(--text3); cursor: pointer; font-size: 16px; }
-
-  /* LOADING */
   .loading-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg); flex-direction: column; gap: 16px; }
   .spinner { width: 40px; height: 40px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
   .c-blue { background: var(--accent-light); color: var(--accent); }
   .c-green { background: var(--green-light); color: var(--green); }
   .c-orange { background: var(--orange-light); color: var(--orange); }
   .c-purple { background: var(--purple-light); color: var(--purple); }
-
-  @media (max-width: 600px) {
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .stats-row .stat-card:last-child { grid-column: 1 / -1; }
-    .form-grid { grid-template-columns: 1fr; }
-    .clock-display { display: none; }
-    .history-action { flex-direction: column; }
-  }
+  @media (max-width: 600px) { .stats-row { grid-template-columns: repeat(2, 1fr); } .stats-row .stat-card:last-child { grid-column: 1 / -1; } .form-grid { grid-template-columns: 1fr; } .clock-display { display: none; } .history-action { flex-direction: column; } }
+  .feedback-btn { position:fixed; bottom:20px; right:20px; background:#2d7dd2; color:#fff; border:none; border-radius:50px; padding:12px 20px; font-size:15px; font-weight:500; cursor:pointer; z-index:99999; box-shadow:0 4px 10px rgba(0,0,0,.25); font-family:'DM Sans',sans-serif; }
+  #feedbackModal { position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; justify-content:center; align-items:center; z-index:100000; }
+  .feedback-content { background:#fff; width:90%; max-width:400px; padding:24px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.2); }
+  .fchip { display:flex; align-items:center; gap:6px; background:#f7fafc; border:1px solid #e2e8f0; border-radius:20px; padding:6px 12px; font-size:13px; cursor:pointer; transition:all .15s; }
+  .fchip:has(input:checked) { background:#ebf4ff; border-color:#2d7dd2; color:#2d7dd2; font-weight:500; }
+  .fchip input { display:none; }
 </style>
 </head>
 <body>
@@ -320,7 +269,7 @@
   </main>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL MEDICAMENTO -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <div class="modal-header">
@@ -330,23 +279,23 @@
     <div class="modal-body">
       <div class="form-grid">
         <div class="form-group full">
-          <label>Nombre del medicamento</label>
+          <label for="medName">Nombre del medicamento</label>
           <input type="text" id="medName" placeholder="Ej: Omeprazol 20mg">
         </div>
         <div class="form-group">
-          <label>Dosis</label>
+          <label for="medDose">Dosis</label>
           <input type="text" id="medDose" placeholder="Ej: 1 cápsula">
         </div>
         <div class="form-group">
-          <label>Emoji / ícono</label>
+          <label for="medEmoji">Emoji / ícono</label>
           <input type="text" id="medEmoji" placeholder="💊" maxlength="2" value="💊">
         </div>
         <div class="form-group full">
-          <label>Indicaciones (opcional)</label>
+          <label for="medNotes">Indicaciones (opcional)</label>
           <textarea id="medNotes" placeholder="Ej: Tomar con el estómago vacío" rows="2"></textarea>
         </div>
         <div class="form-group full">
-          <label>Horarios</label>
+          <label for="newTime">Horarios</label>
           <div class="times-row" id="timesRow"></div>
           <div class="add-time">
             <input type="time" id="newTime">
@@ -354,7 +303,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label>Color</label>
+          <label for="medColor">Color</label>
           <select id="medColor">
             <option value="blue">Azul</option>
             <option value="green">Verde</option>
@@ -363,7 +312,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Activo</label>
+          <label for="medActive">Activo</label>
           <select id="medActive">
             <option value="1">Sí</option>
             <option value="0">No</option>
@@ -380,14 +329,53 @@
     </div>
   </div>
 </div>
+<!-- BOTÓN OPINIÓN -->
+<button id="feedbackBtn" class="feedback-btn">💬 Opinión</button>
 
-<!-- FIREBASE SDKs -->
+<!-- MODAL OPINIÓN -->
+<div id="feedbackModal" style="display:none;">
+  <div class="feedback-content">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <h3 style="font-size:16px;font-weight:600">¿Cómo va MediClock?</h3>
+      <button onclick="document.getElementById('feedbackModal').style.display='none'"
+        style="background:none;border:none;font-size:20px;cursor:pointer;color:#a0aec0;line-height:1">×</button>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">1. ¿Cómo la calificas?</p>
+    <div id="starRow" style="display:flex;gap:8px;margin-bottom:16px">
+      <span class="star" data-v="1" onclick="setStar(1)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="2" onclick="setStar(2)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="3" onclick="setStar(3)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="4" onclick="setStar(4)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+      <span class="star" data-v="5" onclick="setStar(5)" style="font-size:28px;cursor:pointer;opacity:.4">⭐</span>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">2. ¿Qué funciona bien? <span style="font-weight:400;color:#a0aec0">(puedes marcar varios)</span></p>
+    <div id="goodChips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+      <label class="fchip"><input type="checkbox" value="Recordatorios"> Recordatorios</label>
+      <label class="fchip"><input type="checkbox" value="Historial"> Historial</label>
+      <label class="fchip"><input type="checkbox" value="Diseño"> Diseño</label>
+      <label class="fchip"><input type="checkbox" value="Login"> Login</label>
+      <label class="fchip"><input type="checkbox" value="Agregar medicamentos"> Agregar medicamentos</label>
+    </div>
+
+    <p style="font-size:13px;font-weight:500;color:#4a5568;margin-bottom:8px">3. ¿Qué le falta o quitarías?</p>
+    <textarea id="mejora" rows="3"
+      style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:10px;font-family:inherit;font-size:14px;resize:none;margin-bottom:16px;outline:none"
+      placeholder="Escribe aquí..."></textarea>
+
+    <button onclick="sendFeedback()"
+      style="width:100%;background:#2d7dd2;color:white;border:none;border-radius:8px;padding:11px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
+      Enviar opinión
+    </button>
+  </div>
+</div>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-import { getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-
-// ── FIREBASE CONFIG ────────────────────────────────────────────────────────
+import { getFirestore, collection, doc, setDoc, getDoc, getDocs, deleteDoc, onSnapshot, addDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+import { getMessaging, getToken, onMessage }
+  from "https://www.gstatic.com/firebasejs/11.0.0/firebase-messaging.js";
 const firebaseConfig = {
   apiKey: "AIzaSyA5_w9ej_JP_yCHAAUvXqQylf5JphySAT8",
   authDomain: "mediclock-4facc.firebaseapp.com",
@@ -395,6 +383,7 @@ const firebaseConfig = {
   storageBucket: "mediclock-4facc.firebasestorage.app",
   messagingSenderId: "1001583730678",
   appId: "1:1001583730678:web:21149a7987e017984a71d7"
+  
 };
 
 const app = initializeApp(firebaseConfig);
@@ -402,7 +391,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-// ── STATE ──────────────────────────────────────────────────────────────────
 let currentUser = null;
 let meds = [];
 let logs = [];
@@ -413,13 +401,9 @@ let alerted = new Set();
 let unsubMeds = null;
 let unsubLogs = null;
 
-// ── AUTH ───────────────────────────────────────────────────────────────────
 window.loginGoogle = async () => {
-  try {
-    await signInWithPopup(auth, provider);
-  } catch (e) {
-    showToast('Error al iniciar sesión', e.message, 'error');
-  }
+  try { await signInWithPopup(auth, provider); }
+  catch (e) { showToast('Error al iniciar sesión', e.message, 'error'); }
 };
 
 window.showUserMenu = async () => {
@@ -433,41 +417,47 @@ window.showUserMenu = async () => {
 onAuthStateChanged(auth, user => {
   document.getElementById('loadingScreen').style.display = 'none';
   if (user) {
+
+    onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    await iniciarNotificaciones(app, db, user.uid);
+  }
+});
     currentUser = user;
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('appScreen').style.display = 'block';
-    // Avatar
     const av = document.getElementById('userAvatar');
-    if (user.photoURL) av.innerHTML = `<img src="${user.photoURL}">`;
+    if (user.photoURL) av.innerHTML = `<img src="${user.photoURL}" alt="">`;
     else av.textContent = user.displayName?.[0] || '?';
     document.getElementById('userName').textContent = user.displayName?.split(' ')[0] || 'Usuario';
     subscribeData();
+    loadProfile();
   } else {
     currentUser = null;
     document.getElementById('loginScreen').style.display = 'flex';
     document.getElementById('appScreen').style.display = 'none';
+    if (unsubMeds) unsubMeds();
+    if (unsubLogs) unsubLogs();
+    unsubMeds = null;
+    unsubLogs = null;
     meds = []; logs = [];
   }
 });
 
-// ── FIRESTORE LISTENERS ────────────────────────────────────────────────────
 function subscribeData() {
   const uid = currentUser.uid;
-
-  // Medicamentos en tiempo real
+  if (unsubMeds) unsubMeds();
+  if (unsubLogs) unsubLogs();
   unsubMeds = onSnapshot(collection(db, 'users', uid, 'meds'), snap => {
     meds = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     renderAll();
   });
-
-  // Logs en tiempo real
   unsubLogs = onSnapshot(collection(db, 'users', uid, 'logs'), snap => {
     logs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     renderAll();
   });
 }
 
-// ── SAVE / DELETE ──────────────────────────────────────────────────────────
 async function saveMedDB(data, id) {
   const uid = currentUser.uid;
   const ref = id ? doc(db, 'users', uid, 'meds', id) : doc(collection(db, 'users', uid, 'meds'));
@@ -477,11 +467,47 @@ async function saveMedDB(data, id) {
 
 async function deleteMedDB(id) {
   await deleteDoc(doc(db, 'users', currentUser.uid, 'meds', id));
-  // Eliminar logs del medicamento
   const logsSnap = await getDocs(collection(db, 'users', currentUser.uid, 'logs'));
   for (const d of logsSnap.docs) {
     if (d.data().medId === id) await deleteDoc(d.ref);
   }
+}
+async function saveProfileDB(data){
+
+  await setDoc(
+    doc(
+      db,
+      'users',
+      currentUser.uid,
+      'profile',
+      'info'
+    ),
+    data
+  );
+
+}
+async function loadProfile(){
+
+  const snap = await getDoc(
+    doc(
+      db,
+      'users',
+      currentUser.uid,
+      'profile',
+      'info'
+    )
+  );
+
+  if(!snap.exists()) return;
+
+  const p = snap.data();
+
+  const patientName = document.getElementById('patientName');
+  const patientAge = document.getElementById('patientAge');
+
+  if (patientName) patientName.value = p.nombre || '';
+  if (patientAge) patientAge.value = p.edad || '';
+
 }
 
 async function saveLogDB(logData, logId) {
@@ -492,7 +518,6 @@ async function saveLogDB(logData, logId) {
   await setDoc(ref, logData);
 }
 
-// ── HELPERS ────────────────────────────────────────────────────────────────
 function dateStr(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 function today() { return dateStr(new Date()); }
 function formatDate(str) {
@@ -507,8 +532,19 @@ function formatDate(str) {
   return `${days[date.getDay()]} ${d} ${months[m-1]}`;
 }
 function colorClass(c) { return `c-${c}`; }
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[ch]));
+}
+function safeColorClass(color) {
+  return colorClass(['blue', 'green', 'orange', 'purple'].includes(color) ? color : 'blue');
+}
 
-// ── CLOCK ──────────────────────────────────────────────────────────────────
 function updateClock() {
   const now = new Date();
   const h = String(now.getHours()).padStart(2,'0');
@@ -543,8 +579,6 @@ function checkAlerts(now) {
 }
 
 if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission();
-
-// ── TODAY ──────────────────────────────────────────────────────────────────
 function renderToday() {
   const td = today();
   const now = new Date();
@@ -573,10 +607,10 @@ function renderToday() {
   const banners = allDoses.filter(d => d.status==='pending' && Math.abs(d.tMins - nowMins) <= 5);
   document.getElementById('alertBanners').innerHTML = banners.map(d => `
     <div class="alert-banner">
-      <div class="alert-banner-icon">${d.med.emoji}</div>
+      <div class="alert-banner-icon">${escapeHtml(d.med.emoji)}</div>
       <div class="alert-banner-info">
-        <div class="alert-banner-title">¡Hora de ${d.med.name}!</div>
-        <div class="alert-banner-sub">${d.med.dose} · ${d.time}</div>
+        <div class="alert-banner-title">¡Hora de ${escapeHtml(d.med.name)}!</div>
+        <div class="alert-banner-sub">${escapeHtml(d.med.dose)} · ${escapeHtml(d.time)}</div>
       </div>
       <button class="btn-take-now" onclick="markDose('${d.med.id}','${d.time}','taken')">Tomé ✓</button>
     </div>`).join('');
@@ -590,16 +624,25 @@ function renderToday() {
     const isTaken = d.status==='taken', isMissed = d.status==='missed', isPending = d.status==='pending';
     const statusIcon = isTaken?'✓':isMissed?'✕':'○';
     const statusClass = isTaken?'status-taken':isMissed?'status-missed':'status-pending';
-    const actions = isPending
-      ? `<button class="btn-take" onclick="markDose('${d.med.id}','${d.time}','taken')">✓ Tomé</button>
-         <button class="btn-skip" onclick="markDose('${d.med.id}','${d.time}','missed')">✕ Omitir</button>`
-      : isMissed ? `<button class="btn-take" onclick="markDose('${d.med.id}','${d.time}','taken')">↩ Tomé tarde</button>` : '';
-    return `<div class="history-item" style="margin-bottom:8px;opacity:${isMissed ? .7 : 1}">
+    const actions = `
+<button class="btn-take"
+onclick="markDose('${d.med.id}','${d.time}','taken')">
+✓ Tomar ahora
+</button>
+
+${!isTaken ?
+`<button class="btn-skip"
+onclick="markDose('${d.med.id}','${d.time}','missed')">
+✕ Omitir
+</button>`
+: ''}
+`;
+    return `<div class="history-item" style="margin-bottom:8px;opacity:${isMissed?.7:1}">
       <div class="history-status ${statusClass}">${statusIcon}</div>
-      <div style="font-size:20px">${d.med.emoji}</div>
+      <div style="font-size:20px">${escapeHtml(d.med.emoji)}</div>
       <div class="history-info">
-        <div class="history-name">${d.med.name}</div>
-        <div class="history-detail">${d.med.dose}${d.med.notes?' · '+d.med.notes:''}</div>
+        <div class="history-name">${escapeHtml(d.med.name)}</div>
+        <div class="history-detail">${escapeHtml(d.med.dose)}${d.med.notes?' · '+escapeHtml(d.med.notes):''}</div>
       </div>
       <div class="history-time">${d.time}</div>
       <div class="history-action">${actions}</div>
@@ -615,7 +658,6 @@ window.markDose = async (medId, time, status) => {
   if (status==='taken') showToast('Dosis registrada ✓', `${med.emoji} ${med.name} — ${time}`, 'success');
 };
 
-// ── MEDS ───────────────────────────────────────────────────────────────────
 function renderMeds() {
   const el = document.getElementById('medsList');
   if (!meds.length) {
@@ -624,11 +666,11 @@ function renderMeds() {
   }
   el.innerHTML = meds.map(med => `
     <div class="med-card">
-      <div class="med-icon ${colorClass(med.color)}">${med.emoji}</div>
+      <div class="med-icon ${safeColorClass(med.color)}">${escapeHtml(med.emoji)}</div>
       <div class="med-info">
-        <div class="med-name">${med.name}${!med.active?' <span style="font-size:11px;color:var(--text3)">(inactivo)</span>':''}</div>
-        <div class="med-dose">${med.dose}${med.notes?' · '+med.notes:''}</div>
-        <div class="med-times">${med.times.map(t=>`<span class="time-tag ${colorClass(med.color)}">${t}</span>`).join('')}</div>
+        <div class="med-name">${escapeHtml(med.name)}${!med.active?' <span style="font-size:11px;color:var(--text3)">(inactivo)</span>':''}</div>
+        <div class="med-dose">${escapeHtml(med.dose)}${med.notes?' · '+escapeHtml(med.notes):''}</div>
+        <div class="med-times">${med.times.map(t=>`<span class="time-tag ${safeColorClass(med.color)}">${escapeHtml(t)}</span>`).join('')}</div>
       </div>
       <div class="med-actions">
         <button class="icon-btn" onclick="editMed('${med.id}')">
@@ -641,7 +683,6 @@ function renderMeds() {
     </div>`).join('');
 }
 
-// ── HISTORY ────────────────────────────────────────────────────────────────
 function renderHistory() {
   const el = document.getElementById('historyList');
   let filtered = [...logs].sort((a,b) => b.ts - a.ts);
@@ -662,10 +703,10 @@ function renderHistory() {
           const isTaken = log.status==='taken';
           return `<div class="history-item">
             <div class="history-status ${isTaken?'status-taken':'status-missed'}">${isTaken?'✓':'✕'}</div>
-            <div style="font-size:18px">${med.emoji}</div>
+            <div style="font-size:18px">${escapeHtml(med.emoji)}</div>
             <div class="history-info">
-              <div class="history-name">${med.name}</div>
-              <div class="history-detail">${med.dose} · ${log.time}</div>
+              <div class="history-name">${escapeHtml(med.name)}</div>
+              <div class="history-detail">${escapeHtml(med.dose)} · ${escapeHtml(log.time)}</div>
             </div>
             <div class="history-time" style="color:${isTaken?'var(--green)':'var(--red)'}">${isTaken?'Tomada':'Omitida'}</div>
           </div>`;
@@ -688,7 +729,6 @@ window.clearHistory = async () => {
   showToast('Historial eliminado', 'Se borró todo el registro', 'info');
 };
 
-// ── MODAL ──────────────────────────────────────────────────────────────────
 window.openModal = (id) => {
   editingId = id || null;
   pendingTimes = [];
@@ -762,7 +802,6 @@ window.deleteMed = async (id) => {
   showToast('Eliminado', med.name, 'info');
 };
 
-// ── TABS ───────────────────────────────────────────────────────────────────
 window.switchTab = (tab, el) => {
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -770,28 +809,75 @@ window.switchTab = (tab, el) => {
   el.classList.add('active');
 };
 
-// ── TOAST ──────────────────────────────────────────────────────────────────
 window.showToast = (title, msg, type) => {
   const icons = {success:'✅',error:'❌',info:'ℹ️',alert:'🔔'};
   const cont = document.getElementById('toastContainer');
   const t = document.createElement('div');
   t.className = 'toast';
   t.innerHTML = `<div class="toast-icon">${icons[type]||'🔔'}</div>
-    <div class="toast-content"><div class="toast-title">${title}</div><div class="toast-msg">${msg}</div></div>
+    <div class="toast-content"><div class="toast-title">${escapeHtml(title)}</div><div class="toast-msg">${escapeHtml(msg)}</div></div>
     <button class="toast-close" onclick="this.closest('.toast').remove()">×</button>`;
   cont.appendChild(t);
   setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(),300); }, 4000);
 };
 
 function showToast(title, msg, type) { window.showToast(title, msg, type); }
-
-// ── RENDER ALL ─────────────────────────────────────────────────────────────
 function renderAll() { renderToday(); renderMeds(); renderHistory(); }
 
-// ── SERVICE WORKER ─────────────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(()=>{});
+  navigator.serviceWorker.register('sw.js?v=2').then(reg => reg.update()).catch(()=>{});
 }
+// ── FEEDBACK ───────────────────────────────────────────────────────────────
+let selectedRating = 0;
+
+document.getElementById("feedbackBtn").addEventListener("click", () => {
+  selectedRating = 0;
+  document.querySelectorAll(".star").forEach(s => s.style.opacity = ".4");
+  document.querySelectorAll("#goodChips input").forEach(c => c.checked = false);
+  document.getElementById("mejora").value = "";
+  document.getElementById("feedbackModal").style.display = "flex";
+});
+
+window.setStar = function(n) {
+  selectedRating = n;
+  document.querySelectorAll(".star").forEach(s => {
+    s.style.opacity = Number(s.dataset.v) <= n ? "1" : ".4";
+  });
+};
+
+window.sendFeedback = async function() {
+  if (!selectedRating) { alert("Por favor selecciona una calificación ⭐"); return; }
+  const mejora = document.getElementById("mejora").value.trim();
+  const buenos = [...document.querySelectorAll("#goodChips input:checked")].map(c => c.value);
+  const sendBtn = document.querySelector("#feedbackModal button[onclick='sendFeedback()']");
+  sendBtn.textContent = "Enviando...";
+  sendBtn.disabled = true;
+  try {
+    await addDoc(collection(db, "feedback"), {
+      rating: selectedRating,
+      funciona_bien: buenos,
+      mejora: mejora,
+      uid: currentUser ? currentUser.uid : "anonimo",
+      fecha: new Date().toISOString()
+    });
+    document.querySelector(".feedback-content").innerHTML = `
+      <div style="text-align:center;padding:24px 0">
+        <div style="font-size:52px;margin-bottom:12px">🙏</div>
+        <h3 style="margin-bottom:8px;font-size:17px">¡Gracias por tu opinión!</h3>
+        <p style="color:#4a5568;font-size:14px;margin-bottom:20px;line-height:1.5">Tu comentario nos ayuda a mejorar MediClock.</p>
+        <button onclick="document.getElementById('feedbackModal').style.display='none'"
+          style="background:#2d7dd2;color:white;border:none;border-radius:8px;padding:10px 28px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit">
+          Cerrar
+        </button>
+      </div>`;
+  } catch(e) {
+    sendBtn.textContent = "Enviar opinión";
+    sendBtn.disabled = false;
+    alert("Error al enviar. Intenta de nuevo.");
+  }
+};
+
 </script>
+
 </body>
 </html>
