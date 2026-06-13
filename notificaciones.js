@@ -1,16 +1,16 @@
-// ═══════════════════════════════════════════════════════════════
-//  notifications.js  —  MediClock
+﻿// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  notifications.js  â€”  MediClock
 //  Maneja: permisos, token FCM, guardado en Firestore,
 //          notificaciones en primer plano (app abierta)
 //
-//  ⚠️  IMPORTANTE: Este archivo NO se importa con <script src="">
-//  Su código va PEGADO dentro del <script type="module"> de index.html
-//  justo después de donde defines app, auth y db.
+//  âš ï¸  IMPORTANTE: Este archivo NO se importa con <script src="">
+//  Su cÃ³digo va PEGADO dentro del <script type="module"> de index.html
+//  justo despuÃ©s de donde defines app, auth y db.
 //  Ver instrucciones al final del archivo.
-// ═══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
-// ── 1. AGREGA ESTE IMPORT junto a los otros imports de Firebase ──
-// (pégalo en la línea de imports de tu index.html)
+// â”€â”€ 1. AGREGA ESTE IMPORT junto a los otros imports de Firebase â”€â”€
+// (pÃ©galo en la lÃ­nea de imports de tu index.html)
 //
 // import { getMessaging, getToken, onMessage }
 //   from "https://www.gstatic.com/firebasejs/11.0.0/firebase-messaging.js";
@@ -18,11 +18,11 @@
 // (setDoc ya lo tienes importado, no lo dupliques)
 
 
-// ── 2. PEGA ESTA FUNCIÓN después de:  const db = getFirestore(app); ──────
+// â”€â”€ 2. PEGA ESTA FUNCIÃ“N despuÃ©s de:  const db = getFirestore(app); â”€â”€â”€â”€â”€â”€
 
-async function iniciarNotificaciones(app, db, userId) {
+export async function iniciarNotificaciones(app, db, userId) {
   try {
-    // ── Paso 1: verificar soporte del navegador ──────────────────
+    // â”€â”€ Paso 1: verificar soporte del navegador â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     if (!('Notification' in window)) {
       console.warn('Este navegador no soporta notificaciones.');
       return null;
@@ -32,7 +32,7 @@ async function iniciarNotificaciones(app, db, userId) {
       return null;
     }
 
-    // ── Paso 2: pedir permiso al usuario ────────────────────────
+    // â”€â”€ Paso 2: pedir permiso al usuario â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const permiso = await Notification.requestPermission();
     if (permiso !== 'granted') {
       console.warn('Permiso de notificaciones denegado por el usuario.');
@@ -40,35 +40,35 @@ async function iniciarNotificaciones(app, db, userId) {
       return null;
     }
 
-    // ── Paso 3: registrar el Service Worker ─────────────────────
+    // â”€â”€ Paso 3: registrar el Service Worker â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const swRegistration = await navigator.serviceWorker.register(
       '/firebase-messaging-sw.js',
       { scope: '/' }
     );
     console.log('[FCM] Service Worker registrado:', swRegistration);
 
-    // ── Paso 4: iniciar Firebase Messaging ──────────────────────
+    // â”€â”€ Paso 4: iniciar Firebase Messaging â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const messaging = getMessaging(app);
 
-    // 🔴 REEMPLAZA con tu VAPID Key
-    // (Firebase Console → Configuración → Cloud Messaging → Web Push certificates → Generate key pair)
+    // ðŸ”´ REEMPLAZA con tu VAPID Key
+    // (Firebase Console â†’ ConfiguraciÃ³n â†’ Cloud Messaging â†’ Web Push certificates â†’ Generate key pair)
     const VAPID_KEY = 'TU_VAPID_KEY_AQUI';
 
-    // ── Paso 5: obtener token FCM del dispositivo ────────────────
+    // â”€â”€ Paso 5: obtener token FCM del dispositivo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const token = await getToken(messaging, {
       vapidKey: VAPID_KEY,
       serviceWorkerRegistration: swRegistration
     });
 
     if (!token) {
-      console.warn('[FCM] No se pudo obtener el token. ¿Está habilitado en Firebase Console?');
+      console.warn('[FCM] No se pudo obtener el token. Â¿EstÃ¡ habilitado en Firebase Console?');
       return null;
     }
 
     console.log('[FCM] Token obtenido:', token);
 
-    // ── Paso 6: guardar token en Firestore ──────────────────────
-    // Así puedes enviarte notificaciones desde la nube después
+    // â”€â”€ Paso 6: guardar token en Firestore â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // AsÃ­ puedes enviarte notificaciones desde la nube despuÃ©s
     await setDoc(
       doc(db, 'usuarios', userId),
       {
@@ -79,15 +79,15 @@ async function iniciarNotificaciones(app, db, userId) {
       { merge: true }   // no sobreescribe otros campos del usuario
     );
 
-    console.log('[FCM] Token guardado en Firestore ✅');
+    console.log('[FCM] Token guardado en Firestore âœ…');
 
-    // ── Paso 7: escuchar mensajes con app en PRIMER PLANO ───────
-    // Cuando la app está abierta, FCM no muestra notificación del sistema
-    // automáticamente — hay que mostrarla manualmente con un toast
+    // â”€â”€ Paso 7: escuchar mensajes con app en PRIMER PLANO â”€â”€â”€â”€â”€â”€â”€
+    // Cuando la app estÃ¡ abierta, FCM no muestra notificaciÃ³n del sistema
+    // automÃ¡ticamente â€” hay que mostrarla manualmente con un toast
     onMessage(messaging, (payload) => {
       console.log('[FCM] Mensaje en primer plano:', payload);
 
-      const titulo = payload.notification?.title || '⏰ MediClock';
+      const titulo = payload.notification?.title || 'â° MediClock';
       const cuerpo = payload.notification?.body  || 'Es hora de tomar tu medicamento';
       const medId  = payload.data?.medId || '';
 
@@ -103,7 +103,7 @@ async function iniciarNotificaciones(app, db, userId) {
 }
 
 
-// ── TOAST: notificación visual cuando la app está abierta ─────
+// â”€â”€ TOAST: notificaciÃ³n visual cuando la app estÃ¡ abierta â”€â”€â”€â”€â”€
 function mostrarToastNotificacion(titulo, cuerpo, medId = '') {
   // Elimina toast anterior si existe
   const anterior = document.getElementById('fcm-toast');
@@ -129,25 +129,25 @@ function mostrarToastNotificacion(titulo, cuerpo, medId = '') {
   `;
 
   toast.innerHTML = `
-    <div style="font-weight:600;margin-bottom:4px">💊 ${titulo}</div>
+    <div style="font-weight:600;margin-bottom:4px">ðŸ’Š ${titulo}</div>
     <div style="opacity:0.92;font-size:13px">${cuerpo}</div>
     <div style="display:flex;gap:8px;margin-top:10px">
       <button id="fcm-btn-tomar" style="
         background:#fff;color:#1D9E75;border:none;
         padding:6px 14px;border-radius:8px;
         font-size:12px;font-weight:600;cursor:pointer">
-        ✅ Tomar ahora
+        âœ… Tomar ahora
       </button>
       <button id="fcm-btn-cerrar" style="
         background:rgba(255,255,255,0.25);color:#fff;border:none;
         padding:6px 12px;border-radius:8px;
         font-size:12px;cursor:pointer">
-        ✕
+        âœ•
       </button>
     </div>
   `;
 
-  // Animación CSS
+  // AnimaciÃ³n CSS
   const style = document.createElement('style');
   style.textContent = `
     @keyframes fcmSlideIn {
@@ -158,13 +158,13 @@ function mostrarToastNotificacion(titulo, cuerpo, medId = '') {
   document.head.appendChild(style);
   document.body.appendChild(toast);
 
-  // Botón "Tomar ahora" — marca la dosis en Firestore
+  // BotÃ³n "Tomar ahora" â€” marca la dosis en Firestore
   document.getElementById('fcm-btn-tomar').addEventListener('click', () => {
     toast.remove();
     if (medId) marcarDosisDesdeNotificacion(medId);
   });
 
-  // Botón cerrar
+  // BotÃ³n cerrar
   document.getElementById('fcm-btn-cerrar').addEventListener('click', () => {
     toast.remove();
   });
@@ -174,7 +174,7 @@ function mostrarToastNotificacion(titulo, cuerpo, medId = '') {
 }
 
 
-// ── MARCAR DOSIS desde notificación en primer plano ───────────
+// â”€â”€ MARCAR DOSIS desde notificaciÃ³n en primer plano â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function marcarDosisDesdeNotificacion(medId) {
   try {
     const userId = auth.currentUser?.uid;
@@ -188,9 +188,9 @@ async function marcarDosisDesdeNotificacion(medId) {
       },
       { merge: true }
     );
-    console.log('[FCM] Dosis marcada desde notificación:', medId);
+    console.log('[FCM] Dosis marcada desde notificaciÃ³n:', medId);
 
-    // Recarga la vista principal si existe la función
+    // Recarga la vista principal si existe la funciÃ³n
     if (typeof cargarMedicamentosHoy === 'function') {
       cargarMedicamentosHoy();
     }
@@ -200,7 +200,7 @@ async function marcarDosisDesdeNotificacion(medId) {
 }
 
 
-// ── BANNER si el usuario denegó permisos ──────────────────────
+// â”€â”€ BANNER si el usuario denegÃ³ permisos â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function mostrarBannerPermisoDenegado() {
   const banner = document.createElement('div');
   banner.style.cssText = `
@@ -219,48 +219,48 @@ function mostrarBannerPermisoDenegado() {
     box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   `;
   banner.innerHTML = `
-    🔕 Notificaciones bloqueadas.<br>
-    <small>Actívalas en Configuración del navegador para recibir recordatorios.</small>
+    ðŸ”• Notificaciones bloqueadas.<br>
+    <small>ActÃ­valas en ConfiguraciÃ³n del navegador para recibir recordatorios.</small>
   `;
   document.body.appendChild(banner);
   setTimeout(() => banner.remove(), 6000);
 }
 
 
-// ══════════════════════════════════════════════════════════════
-//  INSTRUCCIONES DE INTEGRACIÓN EN index.html
-// ══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+//  INSTRUCCIONES DE INTEGRACIÃ“N EN index.html
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 //
-//  PASO 1 — Agrega este import junto a los demás (línea ~2 del script):
+//  PASO 1 â€” Agrega este import junto a los demÃ¡s (lÃ­nea ~2 del script):
 //
 //    import { getMessaging, getToken, onMessage }
 //      from "https://www.gstatic.com/firebasejs/11.0.0/firebase-messaging.js";
 //
 //
-//  PASO 2 — Llama a iniciarNotificaciones() después del login de Google.
+//  PASO 2 â€” Llama a iniciarNotificaciones() despuÃ©s del login de Google.
 //  Busca tu onAuthStateChanged (o el bloque donde manejas el login) y agrega:
 //
 //    onAuthStateChanged(auth, async (user) => {
 //      if (user) {
 //        await iniciarNotificaciones(app, db, user.uid);
-//        // ... resto de tu código de login
+//        // ... resto de tu cÃ³digo de login
 //      }
 //    });
 //
 //
-//  PASO 3 — Obtén la VAPID Key:
-//    Firebase Console → tu proyecto → ⚙️ Configuración
-//    → Cloud Messaging → Web Push certificates → Generate key pair
-//    → Copia la clave y pégala donde dice TU_VAPID_KEY_AQUI
+//  PASO 3 â€” ObtÃ©n la VAPID Key:
+//    Firebase Console â†’ tu proyecto â†’ âš™ï¸ ConfiguraciÃ³n
+//    â†’ Cloud Messaging â†’ Web Push certificates â†’ Generate key pair
+//    â†’ Copia la clave y pÃ©gala donde dice TU_VAPID_KEY_AQUI
 //
 //
-//  PASO 4 — Manejo del parámetro ?accion=tomar en la URL
-//  (cuando el usuario toca "Tomar ahora" en la notificación del sistema)
-//  Agrega esto al inicio de tu script, después de const db = getFirestore(app):
+//  PASO 4 â€” Manejo del parÃ¡metro ?accion=tomar en la URL
+//  (cuando el usuario toca "Tomar ahora" en la notificaciÃ³n del sistema)
+//  Agrega esto al inicio de tu script, despuÃ©s de const db = getFirestore(app):
 //
 //    const params = new URLSearchParams(window.location.search);
 //    if (params.get('accion') === 'tomar' && params.get('med')) {
 //      marcarDosisDesdeNotificacion(params.get('med'));
 //    }
 //
-// ══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
